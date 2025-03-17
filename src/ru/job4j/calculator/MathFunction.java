@@ -10,7 +10,7 @@ public class MathFunction {
         return y;
     }
         public static void main(String[] args) {
-            int result1 = MathFunction.func1(3);
+            int result1 = MathFunction.func1(6);
             int result2 = MathFunction.func2(5);
             int total = result1 + result2;
             System.out.println(total);
