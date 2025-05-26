@@ -38,4 +38,32 @@ class PointTest {
         double output = Point.distance(x1, y1, x2, y2);
         assertThat(output).isEqualTo(expected2, withPrecision(0.01));
     }
+
+    @Test
+    void when00To20Then2a() {
+        double itog = 2;
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+        double distance = a.distance1(b);
+        assertThat(distance).isEqualTo(itog, withPrecision(0.01));
+    }
+
+    @Test
+    void when00ToMinus20Then2a() {
+        double itog1 = 2;
+        Point a = new Point(0, 0);
+        Point b = new Point(0, -2);
+        double distance = a.distance1(b);
+        assertThat(distance).isEqualTo(itog1, withPrecision(0.01));
+
+    }
+
+    @Test
+    void when32To50Then2Dot82a() {
+        double itog2 = 2.82;
+        Point a = new Point(3, 2);
+        Point b = new Point(5, 0);
+        double distance = a.distance1(b);
+        assertThat(distance).isEqualTo(itog2, withPrecision(0.01));
+    }
 }
