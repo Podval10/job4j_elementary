@@ -7,6 +7,15 @@ public class Max {
 
 
     }
+    public static int max(int left, int right,int left2) {
+        int result = max(right, left2);
+        return max(left, result);
+    }
+    public static int max(int left, int right,int left2,int right2) {
+        int result = max(right, left2, right2);
+        return max(left, result);
+    }
+
 
     public static int min(int left, int right) {
         int result = left >  right? right : left;
